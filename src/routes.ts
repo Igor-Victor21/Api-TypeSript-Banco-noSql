@@ -65,7 +65,11 @@ routes.get("/imagem" , (req: Request, res: Response): any => {
 
 routes.post("/user", (req: Request, res: Response): any => userController.create(req, res))
 routes.get("/user", (req: Request, res: Response): any => userController.read(req, res))
-// routes.get("/user", (req: Request, res: Response): any => userController.update(req, res))
+routes.put("/user/:id", (req: Request, res: Response): any => userController.update(req, res))
+routes.delete("/user/:id", (req: Request, res: Response): any => userController.delete(req, res))
+routes.post("/login", (req: Request, res: Response): any => userController.login(req, res))
+
+
 
 
 export default routes;
