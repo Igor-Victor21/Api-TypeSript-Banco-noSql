@@ -64,5 +64,8 @@ routes.get("/imagem" , (req: Request, res: Response): any => {
 })
 
 routes.post("/user", (req: Request, res: Response): any => userController.create(req, res))
+routes.get("/user", (req: Request, res: Response): any => userController.read(req, res))
+// routes.get("/user", (req: Request, res: Response): any => userController.update(req, res))
+
 
 export default routes;
